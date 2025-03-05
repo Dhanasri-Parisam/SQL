@@ -1,0 +1,107 @@
+
+**1. CREATE DATABASE my_database;**
+
+* **Purpose:** This command creates a new database named "my_database".
+* **Explanation:** Databases are containers for tables, views, and other database objects. This command initializes a new, empty database.
+
+**2. USE my_database;**
+
+* **Purpose:** This command selects "my_database" as the active database.
+* **Explanation:** Before you can create tables or manipulate data, you need to tell the database system which database to work with. This command sets the context for subsequent commands.
+
+**3. CREATE TABLE students (id INT PRIMARY KEY, name VARCHAR(50), age INT, grade CHAR(1));**
+
+* **Purpose:** This command creates a table named "students" within the active database.
+* **Explanation:**
+    * `id INT PRIMARY KEY`: Defines a column named "id" of integer type, designated as the primary key. A primary key uniquely identifies each row in the table.
+    * `name VARCHAR(50)`: Defines a column named "name" to store variable-length strings (up to 50 characters).
+    * `age INT`: Defines a column named "age" to store integer values.
+    * `grade CHAR(1)`: Defines a column named "grade" to store single characters.
+
+**4. INSERT INTO students (id, name, age, grade) VALUES (1, 'John Doe', 20, 'A');**
+
+* **Purpose:** This command inserts a new row of data into the "students" table.
+* **Explanation:**
+    * It specifies the columns to receive values and then provides the corresponding values in parentheses.
+
+**5. SELECT * FROM students;**
+
+* **Purpose:** This command retrieves all rows and all columns from the "students" table.
+* **Explanation:**
+    * `*` is a wildcard that selects all columns.
+
+**6. SELECT name, age FROM students;**
+
+* **Purpose:** This command retrieves only the "name" and "age" columns from all rows in the "students" table.
+* **Explanation:** It allows you to select specific columns, rather than all of them.
+
+**7. SELECT * FROM students WHERE age > 18;**
+
+* **Purpose:** This command retrieves all columns and rows from the "students" table where the "age" is greater than 18.
+* **Explanation:**
+    * The `WHERE` clause filters the rows based on a specified condition.
+
+**8. UPDATE students SET grade = 'B' WHERE id = 1;**
+
+* **Purpose:** This command modifies the "grade" column to 'B' for the row where the "id" is 1.
+* **Explanation:**
+    * The `UPDATE` command changes existing data in a table.
+    * `SET` specifies which column to change and to what value.
+    * `WHERE` clause specifies which row(s) to update.
+
+**9. DELETE FROM students WHERE id = 1;**
+
+* **Purpose:** This command deletes the row from the "students" table where the "id" is 1.
+* **Explanation:**
+    * The `DELETE` command removes rows from a table.
+    * `WHERE` clause specifies which row(s) to delete.
+
+**10. SELECT * FROM students ORDER BY age DESC;**
+
+* **Purpose:** This command retrieves all rows and columns from the "students" table, sorted in descending order by the "age" column.
+* **Explanation:**
+    * `ORDER BY` clause sorts the results.
+    * `DESC` specifies descending order.
+
+**11. SELECT * FROM students LIMIT 5;**
+
+* **Purpose:** This command retrieves the first 5 rows from the "students" table.
+* **Explanation:**
+    * `LIMIT` clause restricts the number of rows returned.
+
+**12. SELECT COUNT(*) FROM students;**
+
+* **Purpose:** This command counts the number of rows in the "students" table.
+* **Explanation:**
+    * `COUNT(*)` is an aggregate function that counts all rows.
+
+**13. SELECT AVG(age) FROM students;**
+
+* **Purpose:** This command calculates the average age of students in the "students" table.
+* **Explanation:**
+    * `AVG()` is an aggregate function that calculates the average.
+
+**14. SELECT grade, COUNT(*) FROM students GROUP BY grade HAVING COUNT(*) > 2;**
+
+* **Purpose:** This command groups students by grade, counts the number of students in each grade, and then filters to show only grades with more than 2 students.
+* **Explanation:**
+    * `GROUP BY` groups rows with the same values into summary rows.
+    * `HAVING` filters the results of a `GROUP BY` query.
+
+**15. SELECT students.name, courses.course_name FROM students INNER JOIN courses ON students.id = courses.student_id;**
+
+* **Purpose:** This command joins the "students" and "courses" tables based on the matching "id" and "student_id" columns, and retrieves the student name and course name.
+* **Explanation:**
+    * `INNER JOIN` combines rows from two tables based on a related column.
+    * `ON` specifies the join condition.
+
+**16. CREATE INDEX idx_name ON students(name);**
+
+* **Purpose:** Creates an index called idx_name on the name column of the students table.
+* **Explanation:** Indexes speed up the retrieval of data.
+
+**17. DROP TABLE students;**
+
+* **Purpose:** This command deletes the "students" table from the database.
+* **Explanation:**
+    * `DROP TABLE` permanently removes a table and its data.
