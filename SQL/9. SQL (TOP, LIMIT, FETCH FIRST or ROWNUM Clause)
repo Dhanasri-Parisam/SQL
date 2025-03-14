@@ -1,0 +1,71 @@
+-------------------------------------------------------------------------------
+The SQL SELECT TOP Clause
+The SELECT TOP clause is used to specify the number of records to return.
+
+The SELECT TOP clause is useful on large tables with thousands of records. 
+Returning a large number of records can impact performance.
+SQL Server uses TOP → SELECT TOP 3 * FROM Customers;
+MySQL uses LIMIT → SELECT * FROM Customers LIMIT 3;
+
+------------------------------------------------------------------------------
+
+-- Step 1: Create Database
+CREATE DATABASE customer;
+USE customer;
+
+-- Step 2: Create Employees Table
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    e_name VARCHAR(50),
+    salary INT
+);
+
+-- Step 3: Insert 20 Sample Records
+INSERT INTO employees (id, e_name, salary) VALUES
+(1, 'Alice', 5000),
+(2, 'Bob', 6000),
+(3, 'Charlie', 7000),
+(4, 'David', 5500),
+(5, 'Emma', 7200),
+(6, 'Frank', 4800),
+(7, 'Grace', 6500),
+(8, 'Hannah', 5300),
+(9, 'Ian', 7100),
+(10, 'Jack', 5900),
+(11, 'Kevin', 5700),
+(12, 'Laura', 6800),
+(13, 'Mia', 6200),
+(14, 'Nathan', 7500),
+(15, 'Olivia', 6400),
+(16, 'Paul', 5600),
+(17, 'Quinn', 6900),
+(18, 'Rachel', 7300),
+(19, 'Sam', 5200),
+(20, 'Tom', 6000);
+
+-- Step 4: Retrieve All Records
+
+-- 🔹 Equivalent Queries in Different Databases
+-- Database	Correct Query to Get First 3 Rows
+-- MySQL	SELECT * FROM employees LIMIT 3;
+-- PostgreSQL	SELECT * FROM employees FETCH FIRST 3 ROWS ONLY;
+-- Oracle	SELECT * FROM employees FETCH FIRST 3 ROWS ONLY;
+-- SQL Server	SELECT TOP 3 * FROM employees;
+
+SELECT * FROM employees LIMIT 10;
+
+-- x + 1 to y + 1
+SELECT * FROM employees LIMIT 11,19;
+
+--  Get Records from 11 to 20 (LIMIT with OFFSET)
+-- SELECT * FROM employees → Selects all columns from the employees table.
+-- LIMIT 10 → Returns 10 rows only.
+-- OFFSET 10 → Skips the first 10 rows and starts fetching from the 11th row.
+
+SELECT * FROM employees LIMIT 10 OFFSET 10;
+
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
