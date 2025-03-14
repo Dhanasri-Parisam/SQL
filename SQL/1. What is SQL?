@@ -34,3 +34,25 @@ VALUES (1, 'Alice', 22);
 
 -- Retrieve data
 SELECT * FROM Students WHERE age > 20;
+
+
+--------------------------------------
+
+CREATE DATABASE customer;
+
+USE customer;
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    e_name VARCHAR(50),
+    C_no INT
+); 
+
+INSERT INTO employees (id, e_name, C_no)
+VALUES
+    (10, 'berlin', 123),
+    (20, 'tokyo', 133),
+    (30, 'palaremo', 143),
+    (40, 'rio', 153);
+    
+SELECT * FROM employees;
