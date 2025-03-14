@@ -1,0 +1,160 @@
+------------------------------------------------
+IS NULL , IS NOT NULL
+------------------------------------------------
+
+CREATE DATABASE customer;
+
+USE customer;
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    e_name VARCHAR(50),
+    C_no INT
+); 
+
+INSERT INTO employees (id, e_name, C_no)
+VALUES
+    (10, 'berlin', 123),  
+    (20, 'tokyo', 133),
+    (30, 'palermo', NULL), 
+    (40, 'rio', 153),
+    (50, 'Nairobi', NULL);
+
+SELECT * FROM employees WHERE C_no IS NULL;
+
+SELECT * FROM employees WHERE C_no IS NOT NULL;
+
+UPDATE employees SET C_no = 143 WHERE id = 30;
+
+UPDATE employees SET C_no = 173 WHERE id = 50;
+ 
+SELECT * FROM employees;
+
+SELECT * FROM employees WHERE C_no IS NOT NULL;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE employees SET e_name = 'proffessor' 
+WHERE e_name = 'berlin';
+
+SELECT * FROM employees;
+
+-------------------------------------------------------
+
+UPDATE -> SYNTAX
+---------
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+----------
+
+
+-- Step 1: Create the table
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary INT
+);
+
+-- Step 2: Insert sample data
+INSERT INTO employees (id, name, salary) VALUES
+(1, 'Alice', 5000),
+(2, 'Bob', 6000),
+(3, 'Charlie', 7000);
+
+-- Step 3: View all employees before update
+SELECT * FROM employees;
+
+-- Step 4: Update Bob's salary to 6500
+UPDATE employees
+SET salary = 6500
+WHERE id = 2;
+
+-- Step 5: Update Charlie's name and salary
+UPDATE employees
+SET name = 'Charlie Brown', salary = 7500
+WHERE id = 3;
+
+-- Step 6: View all employees after updates
+SELECT * FROM employees;
+
+
+-------------------------------------------
+
+SQL DELETE Statement:
+--------------------
+
+DELETE Syntax -> 
+DELETE FROM table_name WHERE condition;
+
+Note: Be careful when deleting records in a table! Notice the WHERE clause in the DELETE statement. 
+The WHERE clause specifies which record(s) should be deleted.
+If you omit the WHERE clause, all records in the table will be deleted!
+
+-------------------
+
+CREATE DATABASE customer;
+USE customer;
+
+-- Step 1: Create the table
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    e_name VARCHAR(50),
+    salary INT
+);
+
+-- Step 2: Insert sample data
+INSERT INTO employees (id, e_name, salary) VALUES
+(1, 'Alice', 5000),
+(2, 'Bob', 6000),
+(3, 'Charlie', 7000);
+
+-- Step 3: Delete Bob
+DELETE FROM employees WHERE e_name = 'Bob';
+
+-- Step 4: Delete all employees (optional)
+-- DELETE FROM employees;
+
+-- Step 5: Drop the entire database (optional)
+-- DROP DATABASE customer;
+
+-- Step 6: View remaining employees
+SELECT * FROM employees;
+
+
+
+----------------------------------------------------------------
+DROP a Table
+To delete the table completely, use the DROP TABLE statement:
+----------------------------------------------------------------
+
+-- Create a database
+CREATE DATABASE company;
+USE company;
+
+-- Create a table
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary INT
+);
+
+-- Insert some records
+INSERT INTO employees (id, name, salary) VALUES
+(1, 'Alice', 5000),
+(2, 'Bob', 6000),
+(3, 'Charlie', 7000);
+
+-- Drop a column (removes salary)
+ALTER TABLE employees DROP COLUMN salary;
+
+-- Drop the table
+DROP TABLE employees;
+
+-- Drop the entire database
+DROP DATABASE company;
+
+
+
+
+
