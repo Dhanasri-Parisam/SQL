@@ -82,6 +82,44 @@ SELECT SUM(salary) AS total_salary FROM employees;
 SELECT AVG(salary) AS average_salary FROM employees;
 
 -- --------------------------------------------------------------
+-- SQL Aggregate Functions with HAVING Clause
+-- --------------------------------------------------------------
+
+-- 1. Minimum salary (HAVING)
+SELECT MIN(salary) AS min_salary FROM employees 
+HAVING MIN(salary) < 5000;
+
+-- 2. Maximum salary (HAVING)
+SELECT MAX(salary) AS max_salary FROM employees 
+HAVING MAX(salary) > 5000;
+
+-- 3. Total count of employees (HAVING)
+SELECT COUNT(*) AS total_count FROM employees 
+HAVING COUNT(*) > 10;
+
+-- 4. Count employees where id > 5 (HAVING)
+SELECT COUNT(id) AS total_cnt FROM employees 
+HAVING COUNT(id) > 5;
+
+-- 5. Sum of all employee IDs (HAVING)
+SELECT SUM(id) AS sum_of_id FROM employees 
+HAVING SUM(id) > 50;
+
+-- 6. Sum of IDs where salary = 7000 (HAVING)
+SELECT SUM(id) AS sum_of_id FROM employees 
+WHERE salary = 7000 
+HAVING SUM(id) > 3;
+
+-- 7. Average of all employee IDs (HAVING)
+SELECT AVG(id) AS avg_of_id FROM employees 
+HAVING AVG(id) > 5;
+
+-- 8. Average ID where salary = 7000 (HAVING)
+SELECT AVG(id) AS avg_of_id FROM employees 
+WHERE salary = 7000 
+HAVING AVG(id) > 5;
+
+-- --------------------------------------------------------------
 -- Using GROUP BY with Aggregate Functions
 -- --------------------------------------------------------------
 
@@ -128,6 +166,57 @@ SELECT * FROM employees WHERE e_name LIKE 'A%';
 
 -- Get employees whose name ends with 'a'
 SELECT * FROM employees WHERE e_name LIKE '%a';
+
+-- --------------------------------------------------------------
+-- SQL Aggregate Functions with WHERE Clause
+-- --------------------------------------------------------------
+
+-- Minimum salary in the table
+SELECT MIN(salary) AS min_salary FROM employees;
+
+-- Minimum salary where salary is less than 5000
+SELECT MIN(salary) AS min_salary FROM employees
+WHERE salary < 5000;
+
+-- Maximum salary in the table
+SELECT MAX(salary) AS max_salary FROM employees;
+
+-- Maximum salary where salary is greater than 5000
+SELECT MAX(salary) AS max_salary FROM employees 
+WHERE salary > 5000;
+
+-- Count total employees
+SELECT COUNT(*) AS total_count FROM employees;
+
+-- Count employees with id greater than 5
+SELECT COUNT(id) AS total_cnt FROM employees WHERE id > 5;
+
+-- Sum of all employee IDs
+SELECT SUM(id) AS sum_of_id FROM employees;
+
+-- Sum of IDs where salary is 7000
+SELECT SUM(id) AS sum_of_id FROM employees WHERE salary = 7000;
+
+-- Average of all employee IDs
+SELECT AVG(id) AS avg_of_id FROM employees;
+
+-- Average ID where salary is 7000
+SELECT AVG(id) AS avg_of_id FROM employees WHERE salary = 7000;
+
+-- ------------------------------------------------------------------
+
+-- --------------------------------------------------------------
+-- SQL Aggregate Functions with DISTINCT
+-- --------------------------------------------------------------
+
+-- Count distinct salaries
+SELECT COUNT(DISTINCT salary) AS unique_salaries 
+FROM employees;
+
+-- Count employees per salary category
+SELECT COUNT(*) AS number_of_records, salary
+FROM employees 
+GROUP BY salary;
 
 -- --------------------------------------------------------------
 -- Pagination Example: Fetch 5 records starting from the 6th record
