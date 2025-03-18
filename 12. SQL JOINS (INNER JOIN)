@@ -3,7 +3,7 @@ SQL JOINS
 INNER JOIN	✅ Only matching rows
 LEFT JOIN	✅ All from left, NULL from right if no match
 RIGHT JOIN	✅ All from right, NULL from left if no match
-FULL JOIN	✅ All from both, NULL where no match
+FULL JOIN	✅ All from both, NULL where no match 
 CROSS JOIN	✅ Every row from table 1 × Every row from table 2
 SELF JOIN	✅ Table joins itself
 NATURAL JOIN	✅ Automatic join on common columns
