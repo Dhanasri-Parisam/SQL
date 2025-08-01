@@ -4,7 +4,7 @@
 
 [📘 SQL TOP 50 INTERVIEW QUESTIONS](https://media.licdn.com/dms/document/media/v2/D561FAQEMjsll9qpYFg/feedshare-document-pdf-analyzed/B56ZhZG0erH0AY-/0/1753841622032?e=1755129600&v=beta&t=81gEF2DU6VZ-AgHlUTK2p-Lmt0kZ34CYbxNl1GAgZuI)
 
-[📘 SQL TOP 50 INTERVIEW QUESTIONS](https://media.licdn.com/dms/document/media/v2/D561FAQEQ14bNIG_uhw/feedshare-document-pdf-analyzed/B56Zg6dTi1HMAY-/0/1753327435580?e=1755129600&v=beta&t=7uR-v1xv7kvOeQozyiDN0GWBRgIZtMFoj32Jw4m7dhE)
+[📘 SQL MOST ASKED INTERVIEW QUESTIONS](https://media.licdn.com/dms/document/media/v2/D561FAQEQ14bNIG_uhw/feedshare-document-pdf-analyzed/B56Zg6dTi1HMAY-/0/1753327435580?e=1755129600&v=beta&t=7uR-v1xv7kvOeQozyiDN0GWBRgIZtMFoj32Jw4m7dhE)
 
 
 
