@@ -1,4 +1,6 @@
-[Open PDF](https://media.licdn.com/dms/document/media/v2/D561FAQEG0TZlLH8xbw/feedshare-document-pdf-analyzed/B56Zhh7rifHcAk-/0/1753989700515?e=1755129600&v=beta&t=BaDJ0jNQNwKx1wJB60BYl080KlzyNVK0w8nZYUGNKxA)
+[📘 SQL COMPLETE PDF](https://media.licdn.com/dms/document/media/v2/D561FAQEG0TZlLH8xbw/feedshare-document-pdf-analyzed/B56Zhh7rifHcAk-/0/1753989700515?e=1755129600&v=beta&t=BaDJ0jNQNwKx1wJB60BYl080KlzyNVK0w8nZYUGNKxA)
+
+[📘 SQL 50 INTERVIEW QUESTIONS](https://media.licdn.com/dms/document/media/v2/D561FAQG1EtIMtvnZsQ/feedshare-document-pdf-analyzed/B56ZhjoutdHMAs-/0/1754018283527?e=1755129600&v=beta&t=JRbstr4s-ehVyQnkdsnGAJOZd4u1YCmRC5Jii8WUdio)
 
 
 
