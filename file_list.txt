@@ -1,0 +1,21 @@
+01_What_is_SQL.sql
+10. SQL (Aggregate Functions)
+11. SQL JOINS
+12. SQL JOINS ( INNER JOIN )
+17. RENAME COMMAND
+18. TRUNCATE COMMAND IN SQL
+2. Relational (SQL) vs. Non-Relational (NoSQL) Databases
+3. Understanding DBMS vs. RDBMS
+4. Basic SQL Syntax & Commands (Beginner Level)
+5.  Working with Tables & Data Types
+6. SQL Data Aggregation
+7 . SQL OPERATORS (AND , OR , NOT)
+8. SQL (IS NULL , UPDATE , DELETE , DROP)
+9. SQL (TOP, LIMIT, FETCH FIRST or ROWNUM Clause)
+Leetcode_Problems
+README.md
+SQL Basics.pdf
+SQL JOINS (LEFT , RIGHT , FULL , CARTISIAN , NATURAL)
+SQL ROADMAP TOPICS ➡️
+SQL-Manual.pdf
+sql best notes.pdf
